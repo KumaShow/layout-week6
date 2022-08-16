@@ -1,0 +1,46 @@
+@mixin pseudo-line-bottom($width) {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: calc(50% - 25px);
+    border-bottom: 3px solid $primary;
+    width: $width;
+  }
+}
+// 預期上課流程 偽元素 - 數字
+@each $number in (1,2,3,4) {
+  .u-pseudo-number--#{$number} {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "0#{$number}";
+      top: -30px;
+      left: 40px;
+      color: $primary;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 1.2;
+      background-color: $gray-700;
+      padding: 0 8px;
+    }
+    
+  }
+}
+// 漸層色
+@each $degree in (104,180) {
+  %linear {
+    background-image: linear-gradient(#{$degree}deg, $secondary, $primary);
+  }
+  .u-linear-text-#{$degree} {
+    @extend %linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .u-linear-bg-#{$degree}{
+    @extend %linear;
+  }
+}

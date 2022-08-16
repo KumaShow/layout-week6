@@ -1,0 +1,80 @@
+.card {
+  background-color: inherit;
+}
+
+.banner {
+  background: url("../images/bg_home.jpg") no-repeat center center;
+  background-size: cover;
+  height: 680px;
+
+  &__content {
+    padding: 52px 86px;
+    background-color: $gray-700;
+    position: relative;
+
+    .border-square {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      position: absolute;
+
+      &--1 {
+        top: -5.5px;
+        left: -5.5px;
+      }
+      &--2 {
+        top: -5.5px;
+        right: -5.5px;
+      }
+      &--3 {
+        bottom: -5.5px;
+        left: -5.5px;
+      }
+      &--4 {
+        bottom: -5.5px;
+        right: -5.5px;
+      }
+    }
+  }
+}
+
+.introduction {
+
+  .pseudo-line {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 12px;
+      border-bottom: 3px solid $primary;
+      width: 50px;
+    }
+  }
+
+  .card {
+    max-width: 306px;
+    border: 1px solid transparent;
+  }
+  .card:hover{
+    .material-symbols-outlined {
+      background-image: linear-gradient(to bottom, $secondary, $primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    border: 1px solid $primary;
+    border-radius: 12px;
+    background-color: $gray-800;
+  }
+}
+
+.hot {
+  .card-footer {
+    margin: 0 -16px;
+  }
+  .card:hover{
+    border: 1px solid $primary;
+    border-radius: inherit;
+  }
+}
