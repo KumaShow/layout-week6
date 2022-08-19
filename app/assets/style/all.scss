@@ -6,9 +6,13 @@
 @import "./helpers/mixin";
 @import "./helpers/utility";
 
+@import "./vendors/swiper";
+
 @import "./base/reset";
 @import "./base/base";
+@import "./base/animation";
 
 @import "./layout/layout";
 
 @import "./pages/index";
+
