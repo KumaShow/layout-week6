@@ -7,18 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <header class="header container-fluid u-bg-gray-600">
-      <nav class="container-lg d-flex justify-content-between">
+    <header class="header u-bg-gray-600">
+      <nav class="container d-flex justify-content-between align-items-center">
         <h1 class="d-flex align-items-center fs-7 ">
           <a class="logo link-light py-6" href="index.html">
             Coding Home
           </a>
         </h1>
-        <div class="d-none d-md-block">
+        
+        <!-- 手機以上menu -->
+        <div class="d-none d-sm-block">
           <ul class="nav justify-content-end">
             <li class="nav-item">
               <a class="nav-link link-white px-4 py-5" href="#">首頁</a>
@@ -36,6 +40,32 @@
             </li>
           </ul>
         </div>
+
+        <!-- menu icon -->
+        <div class="d-sm-none">
+          <a href="#!" class="fs-4 text-primary" id="btnMenu">
+            <span class="material-symbols-outlined">
+              drag_handle
+            </span>
+          </a>
+        </div>
+        <!-- 手機menu -->
+        <ul id="phoneMenu" class="phone-menu d-none navbar flex-column justify-content-end align-items-center text-center u-z-400 u-bg-gray-600">
+          <li class="nav-item w-100">
+            <a class="nav-link d-block link-white py-3" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link d-block link-white py-3" href="#">課程介紹</a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link d-block link-white py-3" href="#">
+              <span class="material-symbols-outlined">
+                account_circle
+              </span>
+              登入
+            </a>
+          </li>
+        </ul>
         
       </nav>
     </header>
@@ -47,7 +77,8 @@
       <p class="m-0">Coding Home © 2022 All Rights Reserved</p>
     </footer>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

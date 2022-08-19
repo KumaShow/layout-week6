@@ -18,6 +18,14 @@
     bottom: 0;
     right: 0;
   }
+
+  .phone-menu {
+    position: absolute;
+    overflow-x: hidden;
+    left: 0;
+    bottom: -220%;
+    width: 100%;
+  }
 }
 
 .logo{
