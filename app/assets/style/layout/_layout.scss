@@ -43,3 +43,31 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+.login-icon {
+  width: 24px;
+}
+
+// 其他登入方式
+%pseudo-hr {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-100%);
+  color: $white;
+  border-bottom: 1px solid $light;
+  width: calc(50% - 60px);
+}
+.hr-solid {
+  position: relative;
+  padding: 0 16px;
+  &::before {
+    @extend %pseudo-hr;
+    left: 0;
+  }
+  &::after {
+    @extend %pseudo-hr;
+    right: 0;
+  }
+}
+
