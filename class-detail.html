@@ -1,10 +1,77 @@
----
-title: 課程介紹 - 詳細內容
-layout: ./app/layout.ejs
-engine: ejs
-current: class-detail
----
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>課程介紹 - 詳細內容</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="header w-100 u-bg-gray-600 position-fixed top-0 start-0 u-z-999">
+      <nav class="container d-flex justify-content-between align-items-center">
+        <h1 class="d-flex align-items-center fs-7 ">
+          <a class="logo link-light py-6" href="index.html">
+            Coding Home
+          </a>
+        </h1>
+        
+        <!-- 手機以上menu -->
+        <div class="pc-menu d-none d-sm-block">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link link-white px-4 py-5" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-white px-4 py-5" href="class.html">課程介紹</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-white px-4 py-5" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <span class="material-symbols-outlined">
+                  account_circle
+                </span>
+                登入
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- menu icon -->
+        <div class="d-sm-none">
+          <a href="#!" class="fs-4 text-primary" id="btnMenu">
+            <span class="material-symbols-outlined">
+              drag_handle
+            </span>
+          </a>
+        </div>
+        <!-- 手機menu -->
+        <ul id="phoneMenu" class="phone-menu d-none navbar flex-column justify-content-end align-items-center text-center u-z-400 u-bg-gray-600">
+          <li class="nav-item w-100">
+            <a class="nav-link d-block link-white py-3" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link d-block link-white py-3" href="class.html">課程介紹</a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link d-block link-white py-3" href="#!" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <span class="material-symbols-outlined">
+                account_circle
+              </span>
+              登入
+            </a>
+          </li>
+        </ul>
+        
+      </nav>
+    </header>
+
+    <main class="main u-mt-header">
+      
 <section class="class-detail u-bg-gray-700 py-6 py-md-11">
   <div class="container">
     <div class="row">
@@ -103,7 +170,7 @@ current: class-detail
           <div class="u-border-square u-border-square--4"></div>
           
           <li class="border-bottom mb-3 pb-3">
-            <a href="#!" class="d-flex justify-content-between align-items-center u-hover-primary">
+            <a href="checkout-order.html" class="d-flex justify-content-between align-items-center u-hover-primary">
               <div>
                 <p class="fs-4">NT$1600</p>
                 <p>1堂50分鐘</p>
@@ -248,3 +315,60 @@ current: class-detail
   </div>
 </section>
 
+      
+    </main>
+
+    <footer class="footer text-center py-4 text-gray-400 u-bg-gray-900">
+      <p class="m-0 fs-10 fs-md-8">Coding Home © 2022 All Rights Reserved</p>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered container">
+        <div class="modal-content px-4 pt-3 pb-6 bg-gray border-white rounded-0">
+          <div class="mb-4">
+            <a href="#!" class="d-block text-end link-white" data-bs-dismiss="modal" aria-label="Close" id="modalClose">
+              <span class="material-symbols-outlined">
+                close
+              </span>
+            </a>
+            <h5 class="modal-title text-center fw-bold fs-4" id="loginModalLabel">登入</h5>
+          </div>
+          <div class="modal-body px-4">
+            <form class="mb-4">
+              <div class="mb-3 text-light">
+                <label for="inputEmail" class="form-label">信箱</label>
+                <input type="email" class="form-control border-white u-bg-gray-700 text-light rounded-1 u-placeholder-light" id="inputEmail" aria-describedby="emailHelp" placeholder="請輸入信箱" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">密碼</label>
+                <input type="password" class="form-control border-white u-bg-gray-700 text-light rounded-1 u-placeholder-light" id="inputPassword" placeholder="請輸入密碼" required>
+              </div>
+              <button type="submit" class="btn text-white w-100 u-linear-bg-104 mb-md-7">登入</button>
+            </form>
+
+            <p class="text-center text-light mb-3 hr-solid">其他登入方式</p>
+
+            <div class="">
+              <a href="#!" class="d-block btn btn-outline-white mb-3 rounded-1 ps-md-5 text-md-start">
+                <span>
+                  <img src="./assets/images/icon_fb.svg" alt="Facebook" class="login-icon login-icon--fb me-5 me-md-8">
+                </span>
+                Facebook 登入
+              </a>
+              <a href="#!" class="d-block btn btn-outline-white rounded-1 ps-md-5 text-md-start">
+                <img src="./assets/images/icon_google.svg" alt="Google" class="login-icon login-icon--google me-5 me-md-10">
+                Google 登入
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
