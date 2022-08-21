@@ -63,7 +63,8 @@
     
   }
 }
-// 漸層色
+
+// gradient 漸層色
 @each $degree in (104,180) {
   .u-linear-text-#{$degree} {
     background-image: linear-gradient(#{$degree}deg, $secondary, $primary);
@@ -74,8 +75,19 @@
 
   .u-linear-bg-#{$degree}{
     background-image: linear-gradient(#{$degree}deg, $secondary, $primary);
+    border: 1px solid transparent;
+    background-origin: border-box;
   }
 }
+// placeholder text color
+@each $name,$color in $theme-colors {
+  .u-placeholder-#{$name} {
+    &::placeholder {
+      color: $color;
+    }
+  }
+}
+
 // info 背景圖
 $infoPhotos: '01','02','03','04';
 @each $infoPhoto in $infoPhotos {
@@ -88,16 +100,14 @@ $infoPhotos: '01','02','03','04';
     }
   }
 }
-
-$z-indexes: 100,200,300,400;
+// z-index
+$z-indexes: 100,200,300,400,999;
 @each $z-index in $z-indexes {
   .u-z-#{$z-index} {
     position: relative;
     z-index: $z-index;
   }
 }
-
-
 
 // $font-sizes: (
 //   1: $h1-font-size,
@@ -111,10 +121,15 @@ $z-indexes: 100,200,300,400;
 //   9: $h9-font-size,
 //   10:$h10-font-size
 // )
-// rwd font-size md 改變字體大小
+// rwd font-size 改變字體大小
 @each $h,$fs in $font-sizes {
   .fs-md-#{$h} {
     @include respond-min(map-get($grid-breakpoints,md)){
+      font-size: $fs !important;
+    }
+  }
+  .fs-lg-#{$h} {
+    @include respond-min(map-get($grid-breakpoints,lg)){
       font-size: $fs !important;
     }
   }
