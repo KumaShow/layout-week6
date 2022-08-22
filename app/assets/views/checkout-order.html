@@ -1,0 +1,128 @@
+---
+title: 課程報名
+layout: ./app/layout.ejs
+engine: ejs
+current: checkout-order
+---
+<div class="checkout-order bg-black pb-6 ">
+  <div class="position-relative ">
+    <!-- 訂單進度 -->
+    <section class="order-process pt-4 pb-3 mb-3 mb-lg-7">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-9 col-md-7 timeline">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3 col-md-5">
+            <div class="timeline-pointer text-center step-1 active">
+              <p>課程報名</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="timeline-pointer text-center step-2">
+              <p>信用卡付款</p>
+            </div>
+          </div>
+          <div class="col-3 col-md-5">
+            <div class="timeline-pointer text-center step-3">
+              <p>付款成功</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="checkout-order__content container position-relative">
+      <!-- 左邊 課程介紹 -->
+      <section class="class-info mb-6 mb-xl-0 m-auto u-bg-gray-600">
+        <div class="card p-4 pe-lg-3 pseudo-triangle">
+          <img src="./assets/images/teacher01.jpg" class="card-img-top border border-3 border-primary rounded-circle u-w-100px m-auto" alt="teacher01">
+          <div class="card-body">
+            <h3 class="card-title text-center fw-bold mb-1 u-ellipsis-2">基礎前端 - HTML</h3>
+            <h4 class="card-subtitle text-center text-primary mb-2">前端語言</h4>
+            <p class="card-text">帶領無基礎的平民老百姓，從最基礎的 HTML 語法出發，使用最淺顯易懂的語言與生活隨處可見的例子，輕鬆進入網頁架設的世界，完成一個基礎的網頁架設。</p>
+          </div>
+        </div>
+      </section>
+      <!-- 右邊 課程報名 -->
+      <section class="sign-up">
+        <div class="card p-4 u-bg-gray-700">
+          <div class="card-title">
+            <h2 class="card-title fs-4 fw-bold text-center mb-4">課程報名</h2>
+          </div>
+          <div class="card-body">
+            <div>
+              <!-- 付款方式 -->
+              <h3 class="card-subtitle fs-7 text-center text-lg-start mb-3">選擇付款方式</h3>
+              <div class="row g-2 g-lg-3 mb-5">
+                <div class="col-6 col-lg-auto">
+                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">信用卡付款</a>
+                </div> 
+                <div class="col-6 col-lg-auto">
+                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">超商繳款</a>
+                </div>
+                <div class="col-6 col-lg-auto">
+                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">ATM轉帳</a>
+                </div>
+                <div class="col-6 col-lg-auto">
+                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">12期分期付款</a>
+                </div>
+              </div>
+            </div>
+            <!-- 訂單資訊 -->
+            <h3 class="card-subtitle fs-7 text-center text-lg-start mb-3">訂單資訊</h3>
+            <form action="#!">
+              <div class="row">
+                <div class="mb-3 text-light col-lg-6">
+                  <label for="inputName" class="form-label">姓名</label>
+                  <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700" id="inputName" placeholder="請輸入姓名">
+                </div>
+    
+                <div class="mb-3 text-light col-lg-6">
+                  <label for="inputPhone" class="form-label">電話</label>
+                  <input type="tel" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputPhone" placeholder="請輸入電話號碼">
+                </div>
+              </div>
+              
+              <div class="mb-3 text-light">
+                <label for="inputEmail" class="form-label u-font-notoSans">Email</label>
+                <input type="email" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputEmail" placeholder="請輸入Email">
+              </div>
+              
+              <div class="row">
+                <div class="col-lg-6">
+                  <label for="selectClass" class="form-label text-light">課程</label>
+                  <select class="form-select mb-3 rounded-1 text-light text-light u-bg-gray-700" aria-label="Select Class">
+                    <option selected>1堂50分鐘</option>
+                    <option value="1">3堂50分鐘</option>
+                    <option value="2">10堂50分鐘</option>
+                    <option value="3">20堂50分鐘</option>
+                    <option value="3">客製化課程/專案製作</option>
+                  </select>
+                </div>
+                
+                <div class="mb-3 text-light col-lg-6">
+                  <label for="inputDate" class="form-label">想預約的日期</label>
+                  <input type="email" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" name="datepicker" id="inputDate" placeholder="請選擇日期">
+                </div>
+              </div>
+
+              <div class="mb-4 text-light">
+                <label for="inputArea" class="form-label">上課地點</label>
+                <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700" id="inputArea" placeholder="請輸入上課地點">
+              </div>
+            </form>
+            <div class="d-md-flex justify-content-md-between align-items-center">
+              <p class="fs-7 mb-4 mb-md-0">NT$1600</p>
+              <div class="">
+                <a href="#!" class="btn text-white py-lg-2 px-lg-7 w-100 u-linear-bg-104">前往結賬</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+    </div>
+    
+  </div>
+</div>
