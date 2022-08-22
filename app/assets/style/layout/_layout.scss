@@ -60,7 +60,6 @@
 }
 .hr-solid {
   position: relative;
-  padding: 0 16px;
   &::before {
     @extend %pseudo-hr;
     left: 0;
