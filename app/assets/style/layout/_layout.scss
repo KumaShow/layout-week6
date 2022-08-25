@@ -1,6 +1,8 @@
 .header {
   height: 90px;
-  position: relative;
+  // position: relative;
+  position: sticky;
+  top: 0;
   &::before {
     content: "";
     width: 50%;
@@ -70,3 +72,6 @@
   }
 }
 
+.main {
+  min-height: calc(100vh - 90px);
+}
