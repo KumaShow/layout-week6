@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <header class="header w-100 u-bg-gray-600 position-fixed top-0 start-0 u-z-999">
+    <header class="header u-bg-gray-600 u-z-999">
       <nav class="container d-flex justify-content-between align-items-center">
         <h1 class="d-flex align-items-center fs-7 ">
           <a class="logo link-light py-6" href="index.html">
@@ -92,10 +92,10 @@
             <h5 class="modal-title text-center fw-bold fs-4" id="loginModalLabel">登入</h5>
           </div>
           <div class="modal-body px-4">
-            <form class="mb-4">
+            <form class="mb-4 mb-md-0">
               <div class="mb-3 text-light">
-                <label for="inputEmail" class="form-label">信箱</label>
-                <input type="email" class="form-control border-white u-bg-gray-700 text-light rounded-1 u-placeholder-light" id="inputEmail" aria-describedby="emailHelp" placeholder="請輸入信箱" required>
+                <label for="inputLoginEmail" class="form-label">信箱</label>
+                <input type="email" class="form-control border-white u-bg-gray-700 text-light rounded-1 u-placeholder-light" id="inputLoginEmail" aria-describedby="emailHelp" placeholder="請輸入信箱" required>
               </div>
               <div class="mb-3">
                 <label for="inputPassword" class="form-label">密碼</label>
@@ -106,7 +106,7 @@
 
             <p class="text-center text-light mb-3 hr-solid">其他登入方式</p>
 
-            <div class="">
+            <div>
               <a href="#!" class="d-block btn btn-outline-white mb-3 rounded-1 ps-md-5 text-md-start">
                 <span>
                   <img src="./assets/images/icon_fb.svg" alt="Facebook" class="login-icon login-icon--fb me-5 me-md-8">
@@ -122,7 +122,10 @@
         </div>
       </div>
     </div>
+    <!-- datepicker -->
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
