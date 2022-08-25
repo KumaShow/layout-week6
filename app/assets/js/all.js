@@ -32,3 +32,15 @@ function menuAnimationToggle() {
     }
   })
 }
+
+// payment-method
+const paymentMethods = document.querySelectorAll(".payment-method");
+
+paymentMethods.forEach(item => {
+  item.addEventListener("click", ()=> {
+    paymentMethods.forEach(item => {
+      item.classList.remove("is-active");
+    })
+    item.classList.add("is-active");
+  });
+})
