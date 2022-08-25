@@ -1,0 +1,58 @@
+---
+title: 付款完成
+layout: ./app/layout.ejs
+engine: ejs
+current: checkout-completed
+---
+
+<div class="bg-black main-height">
+  <!-- 訂單進度 -->
+  <section class="order-process pt-4 pb-3 mb-3 mb-lg-7">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9 col-md-7 timeline">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-5">
+          <div class="timeline-pointer text-center step-1 active">
+            <p>課程報名</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="timeline-pointer text-center step-2 active">
+            <p>信用卡付款</p>
+          </div>
+        </div>
+        <div class="col-3 col-md-5">
+          <div class="timeline-pointer text-center step-3 active">
+            <p>付款成功</p>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="checkout-completed">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-6 col-xl-4 m-auto">
+          <div class="card p-4">
+            <div class="card-body">
+              <h2 class="fs-4 fw-bold text-center mb-4">
+                <span class="material-symbols-outlined text-primary fs-1 fw-bold no-fill">
+                  verified
+                </span>
+                完成訂購
+              </h2>
+              <p class="card-text mb-4">恭喜您已完成「基礎前端 - HTML」課程報名，請注意郵件訊息，家教老師將與您聯繫！</p>
+              <div class="text-center">
+                <a href="class.html" class="btn text-white u-linear-bg-104 py-2 px-7">看看其他課程</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
