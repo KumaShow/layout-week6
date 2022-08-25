@@ -3,9 +3,6 @@
 }
 // 全台最豐富的程式家教
 .banner {
-  @include respond-min(lg) {
-    padding: 80px 76px;
-  }
   &__image {
     background: url("../images/bg_home_mobile.jpg") no-repeat center center;
     background-size: cover;
@@ -27,26 +24,6 @@
 }
 // 手把手帶你 親自到家教到會
 .introduction {
-
-  &__item {
-    &:not(:last-child){
-      @include respond-max(md){
-        margin-bottom: 24px;
-      }
-    }
-  }
-
-  .pseudo-line {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -16px;
-      left: 12px;
-      border-bottom: 3px solid $primary;
-      width: 50px;
-    }
-  }
 
   .card {
     max-width: 336px;
@@ -79,7 +56,7 @@
     li {
       margin-right: 8px;
       @include respond-min(md) {
-        margin-right: 16px;
+        margin-right: 24px;
       }
     }
   }
@@ -94,9 +71,7 @@
       height: 60px;
     }
   }
-  .card-footer {
-    // margin: 0 -16px;
-  }
+
   .card:hover{
     border: 1px solid $primary;
     border-radius: inherit;
@@ -194,7 +169,7 @@
       border-bottom-right-radius: 10px;
     }
   }
-  @include respond-min(md) {
+  @include respond-min(lg) {
     .card:hover {
       .squareRounded {
         display: block;
@@ -204,13 +179,55 @@
   
 }
 // 專屬你的學習課程
-.share {
-  &__image {
-    max-width: 331px;
+.review {
+  @include respond-min(lg) {
+    background: url("../images/bg_share.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  // 左邊圖片框線
+  .u-pseudo-outline {
+    position: relative;
+    z-index: 1;
+    @include respond-min(lg) {
+      left: 20px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border: 1px solid $light;
+      border-radius: 24px;
+    }
+  }
+
+  .card {
+    height: auto;
+    width: 100%;
+    border-radius: 24px 24px 24px 0;
+    @include respond-min(lg) {
+      position: absolute;
+      bottom: 0;
+      right: 24px;
+    }
+
+    &-img {
+      width: 80px;
+      position: absolute;
+      right: 24px;
+      top: -35px;
+    }
+    &-body {
+      color: $blue-dark-100;
+      // padding: 0;
+    }
   }
 }
 // 加入我們成為導師
-.joinus {
+.joinUs {
   .material-symbols-outlined {
     font-size: 80px;
   }
