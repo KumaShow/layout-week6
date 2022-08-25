@@ -5,24 +5,36 @@
   'GRAD' 0,
   'opsz' 48
 }
+.no-fill {
+  font-variation-settings: 'FILL' 0;
+}
+
+.btn:focus:focus {
+  box-shadow: none;
+}
+
+.card-body {
+  padding: 0;
+}
 
 //color
 .u-bg-gray-600 {
-  background-color: $gray-600 !important;
+  background-color: $gray-600;
 }
 .u-bg-gray-700 {
-  background-color: $gray-700 !important; 
+  background-color: $gray-700; 
 }
 .u-bg-gray-800 {
-  background-color: $gray-800 !important; 
+  background-color: $gray-800; 
 }
 .u-bg-gray-900 {
-  background-color: $gray-900 !important; 
+  background-color: $gray-900; 
 }
 .u-hover-primary:hover {
   color: $primary;
 }
-.u-hover-outline-primary:hover {
+.u-hover-outline-primary:hover,
+.is-active {
   color: $primary;
   background-color: transparent;
   border-color: $primary;
@@ -32,9 +44,8 @@
 .u-pseudo-line-bl-50 {
   @include pseudo-line-bottom(50px);
   &::after{
-    // md以下在中間 md以上靠左
     left: calc(50% - 25px);
-    @include respond-min(md) {
+    @include respond-min(lg) {
       left: 0;
     }
   }
@@ -129,11 +140,16 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-// 測試用
-.u-overflow-scroll-x {
-  overflow-x: scroll;
+
+.main-height {
+  min-height: calc(100vh - 90px);
 }
-// header 置頂推擠用
-.u-mt-header {
-  margin-top: 90px;
+
+.u-btn-rwd {
+  width: 100%;
+  padding: 8px 16px;
+  @include respond-min(md) {
+    width: auto;
+    padding: 8px 48px;
+  }
 }
