@@ -1,0 +1,77 @@
+// 首頁 - 專屬你的學習課程
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+  }
+  
+  .swiper-button {
+    &-next,&-prev {
+      position: unset;
+      margin-top: 0;
+      height: 24px;
+    }
+  }
+  
+  .swiper-nav {
+    @include respond-min(lg) {
+      position: absolute;
+      bottom: 5%;
+      left: 30%;
+    }
+  }
+
+  .swiper-pagination {
+    position: unset;
+    width: auto;
+    .swiper-pagination-bullet {
+      background-color: $primary;
+      opacity: 1;
+      &-active {
+        width: 16px;
+        border-radius: 100px;
+      }
+    }
+  }
+  
+}
+// 首頁 - 你想要學習的程式
+.classSwiper {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      width: 180px;
+    }
+  }
+}
+
+// 課程介紹 - 課程類型
+.classTypeSwiper {
+  // width: auto 讓 slide自適應寬度
+  .swiper-slide {
+    width: auto!important;
+    margin-right: 16px!important; 
+  }
+}
