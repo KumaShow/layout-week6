@@ -7,6 +7,7 @@
 @import "./helpers/utility";
 
 @import "./vendors/swiper";
+@import "./vendors/datepicker";
 
 @import "./base/reset";
 @import "./base/base";
@@ -15,5 +16,8 @@
 @import "./layout/layout";
 
 @import "./pages/index";
+@import "./pages/class-detail";
 @import "./pages/checkout-order";
+@import "./pages/checkout-payment";
+@import "./pages/checkout-completed";
 
