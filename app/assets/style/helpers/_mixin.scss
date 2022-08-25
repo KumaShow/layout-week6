@@ -77,6 +77,10 @@
     background-image: linear-gradient(#{$degree}deg, $secondary, $primary);
     border: 1px solid transparent;
     background-origin: border-box;
+    &:hover {
+      // background-image: linear-gradient(#{$degree}deg,darken($secondary,5%),darken($primary,5%));
+      background-image: linear-gradient(#{$degree}deg, $primary, $secondary);
+    }
   }
 }
 // placeholder text color
