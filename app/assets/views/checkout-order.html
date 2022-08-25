@@ -47,7 +47,7 @@ current: checkout-order
       </section>
       <!-- 右邊 課程報名 -->
       <section class="sign-up">
-        <div class="card p-4 u-bg-gray-700">
+        <div class="card p-4 ">
           <div class="card-title">
             <h2 class="card-title fs-4 fw-bold text-center mb-4">課程報名</h2>
           </div>
@@ -57,68 +57,71 @@ current: checkout-order
               <h3 class="card-subtitle fs-7 text-center text-lg-start mb-3">選擇付款方式</h3>
               <div class="row g-2 g-lg-3 mb-5">
                 <div class="col-6 col-lg-auto">
-                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">信用卡付款</a>
+                  <a href="#!" class="payment-method d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">信用卡付款</a>
                 </div> 
                 <div class="col-6 col-lg-auto">
-                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">超商繳款</a>
+                  <a href="#!" class="payment-method d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">超商繳款</a>
                 </div>
                 <div class="col-6 col-lg-auto">
-                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">ATM轉帳</a>
+                  <a href="#!" class="payment-method d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">ATM轉帳</a>
                 </div>
                 <div class="col-6 col-lg-auto">
-                  <a href="#!" class="d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">12期分期付款</a>
+                  <a href="#!" class="payment-method d-block btn btn-outline-white p-3 px-lg-5 u-hover-outline-primary">12期分期付款</a>
                 </div>
               </div>
             </div>
             <!-- 訂單資訊 -->
             <h3 class="card-subtitle fs-7 text-center text-lg-start mb-3">訂單資訊</h3>
-            <form action="#!">
+            <form action="checkout-payment.html">
               <div class="row">
                 <div class="mb-3 text-light col-lg-6">
                   <label for="inputName" class="form-label">姓名</label>
-                  <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700" id="inputName" placeholder="請輸入姓名">
+                  <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700" id="inputName" placeholder="請輸入姓名" required>
                 </div>
     
                 <div class="mb-3 text-light col-lg-6">
                   <label for="inputPhone" class="form-label">電話</label>
-                  <input type="tel" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputPhone" placeholder="請輸入電話號碼">
+                  <input type="tel" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputPhone" placeholder="請輸入電話號碼" required>
                 </div>
               </div>
               
               <div class="mb-3 text-light">
                 <label for="inputEmail" class="form-label u-font-notoSans">Email</label>
-                <input type="email" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputEmail" placeholder="請輸入Email">
+                <input type="email" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputEmail" placeholder="請輸入Email" required>
               </div>
               
               <div class="row">
                 <div class="col-lg-6">
                   <label for="selectClass" class="form-label text-light">課程</label>
-                  <select class="form-select mb-3 rounded-1 text-light text-light u-bg-gray-700" aria-label="Select Class">
-                    <option selected>1堂50分鐘</option>
-                    <option value="1">3堂50分鐘</option>
-                    <option value="2">10堂50分鐘</option>
-                    <option value="3">20堂50分鐘</option>
-                    <option value="3">客製化課程/專案製作</option>
-                  </select>
+                  <div class="position-relative">
+                    <select class="form-select mb-3 rounded-1 text-light text-light u-bg-gray-700" aria-label="Select Class" required>
+                      <option selected>1堂50分鐘</option>
+                      <option value="1">3堂50分鐘</option>
+                      <option value="2">10堂50分鐘</option>
+                      <option value="3">20堂50分鐘</option>
+                      <option value="3">客製化課程/專案製作</option>
+                    </select>
+                    <span class="material-symbols-outlined text-light position-absolute top-50 end-3 translate-middle-y">
+                      expand_more
+                    </span>
+                  </div>
                 </div>
                 
-                <div class="mb-3 text-light col-lg-6">
+                <div class="mb-3 col-lg-6">
                   <label for="inputDate" class="form-label">想預約的日期</label>
-                  <input type="email" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" name="datepicker" id="inputDate" placeholder="請選擇日期">
+                  <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" name="datepicker" id="inputDate" placeholder="請選擇日期" required>
                 </div>
               </div>
 
               <div class="mb-4 text-light">
                 <label for="inputArea" class="form-label">上課地點</label>
-                <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700" id="inputArea" placeholder="請輸入上課地點">
+                <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700" id="inputArea" placeholder="請輸入上課地點" required>
+              </div>
+              <div class="d-md-flex justify-content-md-between align-items-center">
+                <p class="fs-7 mb-4 mb-md-0">NT$1600</p>
+                <button type="submit" class="btn text-white py-lg-2 px-lg-7 u-btn-rwd u-linear-bg-104">前往結賬</button>
               </div>
             </form>
-            <div class="d-md-flex justify-content-md-between align-items-center">
-              <p class="fs-7 mb-4 mb-md-0">NT$1600</p>
-              <div class="">
-                <a href="#!" class="btn text-white py-lg-2 px-lg-7 w-100 u-linear-bg-104">前往結賬</a>
-              </div>
-            </div>
           </div>
         </div>
       </section> 

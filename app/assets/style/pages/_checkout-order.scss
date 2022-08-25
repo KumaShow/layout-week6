@@ -80,7 +80,6 @@
   &__content {
     @include respond-min(lg) {
       margin-bottom: 114px;
-      min-height: calc(100vh - 90px - 72px);
     }
   }
 }
@@ -106,6 +105,7 @@
 
 .sign-up {
   .card {
+    background-color: $gray-700;
     @include respond-min(xl) {
       max-width: 856px;
       position: relative;
