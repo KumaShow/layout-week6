@@ -42,15 +42,16 @@ var classSwiper = new Swiper(".classSwiper", {
     },
   }
 })
-
+// class.html 上方課程類別
 var classTypeSwiper = new Swiper(".classTypeSwiper", {
   enabled: true,
   slidesPerView: 'auto',
   slidesPerColumn: 1,
+  // spaceBetween: auto,
   breakpoints: {
     // when window width is >= 992px
     992: {
-      enabled: false,
+      // enabled: false,
     }
   }
 })

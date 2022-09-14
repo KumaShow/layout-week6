@@ -72,6 +72,9 @@
   // width: auto 讓 slide自適應寬度
   .swiper-slide {
     width: auto!important;
-    margin-right: 16px!important; 
+    margin-right: 16px!important;
+    a {
+      padding: 16px 32px;
+    }
   }
 }
