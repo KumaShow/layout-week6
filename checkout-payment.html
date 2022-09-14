@@ -78,8 +78,8 @@
   <section class="order-process pt-4 pb-3 mb-3 mb-lg-7">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-9 col-md-7 timeline">
-        </div>
+        <!-- 付款流程底線 -->
+        <div class="col-9 col-md-7 timeline timeline-step-2"></div>
       </div>
       <div class="row">
         <div class="col-3 col-md-5">
@@ -116,17 +116,17 @@
                 <form action="checkout-completed.html">
                   <div class="mb-3 text-light">
                     <label for="inputName" class="form-label">信用卡帳號</label>
-                    <input type="number" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputName" placeholder="Xxxx-xxxx-xxxx-xxxx" required>
+                    <input type="text" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputName" placeholder="Xxxx-xxxx-xxxx-xxxx">
                   </div>
         
                   <div class="mb-3 text-light">
                     <label for="inputPhone" class="form-label">安全碼</label>
-                    <input type="number" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputPhone" placeholder="***" required>
+                    <input type="password" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputPhone" placeholder="***">
                   </div>
         
                   <div class="mb-3 text-light">
                     <label for="inputExpiryDate" class="form-label">有效日期</label>
-                    <input type="number" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputExpiryDate" placeholder="MM/YY" required>
+                    <input type="number" class="form-control rounded-1 text-light u-placeholder-light u-bg-gray-700 u-font-notoSans" id="inputExpiryDate" placeholder="MM/YY">
                   </div>
 
                   <div class="d-md-flex justify-content-md-between align-items-center">
@@ -177,9 +177,7 @@
 
             <div>
               <a href="#!" class="d-block btn btn-outline-white mb-3 rounded-1 ps-md-5 text-md-start">
-                <span>
-                  <img src="./assets/images/icon_fb.svg" alt="Facebook" class="login-icon login-icon--fb me-5 me-md-8">
-                </span>
+                <img src="./assets/images/icon_fb.svg" alt="Facebook" class="login-icon login-icon--fb me-5 me-md-8">
                 Facebook 登入
               </a>
               <a href="#!" class="d-block btn btn-outline-white rounded-1 ps-md-5 text-md-start">

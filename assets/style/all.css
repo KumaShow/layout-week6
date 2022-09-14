@@ -15509,6 +15509,10 @@ fieldset:disabled .btn {
   margin-right: 16px !important;
 }
 
+.classTypeSwiper .swiper-slide a {
+  padding: 16px 32px;
+}
+
 .datepicker-cell {
   color: #000;
 }
@@ -15796,10 +15800,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -15981,6 +15981,44 @@ body {
   right: 0;
   height: 2px;
   background-color: #C1C1C1;
+}
+
+.timeline-step-2 {
+  position: relative;
+}
+
+.timeline-step-2::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 50%;
+  height: 2px;
+  background-color: #62DB54;
+}
+
+.timeline-step-2::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  right: 0;
+  height: 2px;
+  background-color: #C1C1C1;
+}
+
+.timeline-step-3 {
+  position: relative;
+}
+
+.timeline-step-3::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #62DB54;
 }
 
 .timeline-pointer {
