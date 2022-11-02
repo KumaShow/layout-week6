@@ -4,7 +4,7 @@
 
 ## 使用技術
 
-* Gulp + EJS Layout 版型管理
+* EJS Layout 版型管理
 * Bootstrap 5 變數與元件客制化
 * Swiper 輪播效果
 * datepicker 日曆套件
