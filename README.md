@@ -4,6 +4,7 @@
 
 ## 使用技術
 
+* Gulp 任務管理
 * EJS Layout 版型管理
 * Bootstrap 5 變數與元件客制化
 * Swiper 輪播效果
