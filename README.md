@@ -2,6 +2,16 @@
 
 網頁切版練習，包含響應式 RWD，漢堡選單手刻簡易動畫效果
 
+> 詳細畫面請觀看: 
+>
+> [首頁](https://kumashow.github.io/layout-week6/)
+>
+> [課程介紹](https://kumashow.github.io/layout-week6/class.html)
+>
+> [課程詳細資料](https://kumashow.github.io/layout-week6/class-detail.html)
+>
+> [結帳畫面](https://kumashow.github.io/layout-week6/checkout-order.html)
+
 ## 使用技術
 
 * Gulp 任務管理
@@ -20,9 +30,3 @@
 
 ### 手機漢堡選單
 ![](https://i.imgur.com/A566gBP.gif)
-
-> 詳細畫面請觀看: 
-> [首頁](https://kumashow.github.io/layout-week6/)
-> [課程介紹](https://kumashow.github.io/layout-week6/class.html)
-> [課程詳細資料](https://kumashow.github.io/layout-week6/class-detail.html)
-> [結帳畫面](https://kumashow.github.io/layout-week6/checkout-order.html)
